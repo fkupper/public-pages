@@ -1,0 +1,169 @@
+:root {
+  --bg: #f6f3ec;
+  --ink: #1b1a17;
+  --muted: #5c574e;
+  --line: #d8d1c4;
+  --card: #fffdf8;
+  --link: #0b5f8a;
+  --link-hover: #084866;
+  --header: #141b24;
+  --header-ink: #f6f3ec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.site-header,
+.site-footer {
+  font-family: system-ui, "Segoe UI", sans-serif;
+}
+
+.site-header {
+  background: var(--header);
+  color: var(--header-ink);
+}
+
+.site-header a,
+.site-footer a {
+  color: inherit;
+}
+
+.wrap {
+  width: min(44rem, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.site-header .wrap,
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.crumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.crumb a {
+  text-decoration: none;
+}
+
+.crumb a:hover,
+.brand:hover,
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem 0 3rem;
+}
+
+h1,
+h2 {
+  font-family: system-ui, "Segoe UI", sans-serif;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 0.4rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.6rem;
+}
+
+.lede,
+.meta,
+.site-footer {
+  font-family: system-ui, "Segoe UI", sans-serif;
+  color: var(--muted);
+}
+
+.lede {
+  font-size: 1.05rem;
+  margin: 0 0 1.5rem;
+}
+
+.meta {
+  font-size: 0.92rem;
+  margin: 0 0 1.75rem;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  border-color: var(--link);
+}
+
+.card strong {
+  display: block;
+  font-family: system-ui, "Segoe UI", sans-serif;
+  color: var(--link);
+  margin-bottom: 0.2rem;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  font-size: 0.88rem;
+}
